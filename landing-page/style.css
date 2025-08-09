@@ -2,8 +2,21 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-     overflow-x: hidden;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 /* Custom colors from the palette */
 :root {
     --bluish-purple: #4F46E5;
