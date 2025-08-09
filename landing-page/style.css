@@ -1,0 +1,235 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+     overflow-x: hidden;
+}
+/* Custom colors from the palette */
+:root {
+    --bluish-purple: #4F46E5;
+    --yuzu-jam: #f97316;
+    --ice-blue-baby: #a855f7;
+    --rich-blue: #06b6d4;
+    --electric-indigo: #7c3aed;
+    --interstellar-blue: #22c55e;
+    --tricorn-black: #1f2937;
+    --acier: #6b7280;
+    --wizard-white: #f8fafc;
+    --cuddly-yarn: #fef3c7;
+    --hornet-sting: #ef4444;
+    --frog: #22c55e;
+    --teal-gradient-start: #4DCA79;
+    --teal-gradient-end:#1CBDDD ;
+}
+
+/* Custom color utilities */
+.bg-primary { 
+    background-color: var(--bluish-purple); 
+}
+
+.bg-secondary { 
+    background-color: var(--yuzu-jam); 
+}
+
+.text-primary { 
+    color: var(--bluish-purple); 
+}
+
+.text-secondary { 
+    color: var(--yuzu-jam); 
+}
+
+.border-primary { 
+    border-color: var(--bluish-purple); 
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+/* Gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--bluish-purple) 0%, var(--electric-indigo) 100%);
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bluish-purple);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--electric-indigo);
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.3s ease;
+}
+
+/* Custom focus styles */
+button:focus,
+a:focus {
+    outline: 2px solid var(--bluish-purple);
+    outline-offset: 2px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .fade-in-up {
+        animation-delay: 0.2s;
+    }
+    
+    /* Ensure proper spacing on mobile */
+    .hero-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    /* Adjust text sizes for mobile */
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    /* Improve button tap targets on mobile */
+    .mobile-button {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
+
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* FAQ specific styles */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.faq-answer {
+    transition: all 0.3s ease;
+}
+
+/* Service card specific enhancements */
+ .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 120px;
+            gap: 60px;
+        }
+
+        .service-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .service-title {
+            color: var(--bluish-purple);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .service-description {
+            color: var(--acier);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .service-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 300px;
+        }
+
+
+/* Navigation enhancements */
+nav {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Hero section background and overlay */
+.hero-background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Teal gradient box */
+.teal-gradient-box {
+    background: linear-gradient(35deg, var(--teal-gradient-start) 0%, var(--teal-gradient-end)100%);
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 1024px) {
+    .hero-background {
+        background-attachment: scroll;
+    }
+    
+    section[style*="background-image"] {
+        min-height: 100vh;
+    }
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
