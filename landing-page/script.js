@@ -122,7 +122,7 @@ function initializeSmoothScrolling() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const headerOffset = 80; // Account for sticky header
+                const headerOffset = 80; 
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
@@ -167,7 +167,6 @@ function initializeHeaderEffects() {
     }, 10));
 }
 
-// Initialize header effects
 initializeHeaderEffects();
 
 // Lazy loading for images
@@ -198,7 +197,7 @@ function trackPerformance() {
     });
 }
 
-// Initialize performance tracking
+
 trackPerformance();
 
 // Error handling for images
@@ -214,5 +213,5 @@ function handleImageErrors() {
     });
 }
 
-// Initialize image error handling
+
 handleImageErrors();
